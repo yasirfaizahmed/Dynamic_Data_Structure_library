@@ -103,6 +103,31 @@ int sll_delete_begining( sll_node** ROOT ){	//deletes element at begining
 		free(temp);
 	}
 	
-	return -1;
+	return 1;
 }
+
+int sll_delete_at_position( sll_node** ROOT, int pos ){	//deletes element at passed position
+	if( pos > sll_len(*ROOT) ) return -1;
+	if( *ROOT == NULL )	return -1;
+	if( pos == 1 ) sll_delete_begining(ROOT);
+	else{
+		sll_node* p = *ROOT;
+		int index = 0;
+		while( index != pos-1 ){
+			p = p->link;
+			index++;
+		}
+		//swap operation
+		sll_node* q = p->link;
+		p->link = q->link;
+		q->link = NULL;
+		free(q);
+	}
+	
+	return 1;
+}
+
+
+
+
 

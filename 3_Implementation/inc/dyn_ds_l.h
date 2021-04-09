@@ -12,7 +12,7 @@ USERDEFINED HEADER INVLUDES MACRO DEFINITIONS, FUNCTION PROTOTYPING AND OTHER DE
 #include <stdio.h>
 
 /****************************** structure defintions *************************/
-typedef struct sll_node{
+typedef struct sll_node{	//Singly-linked list structure typedef
     int data;
     struct sll_node* link;
 }sll_node;
@@ -25,6 +25,6 @@ int sll_len( sll_node* root );
 int sll_add_at_begining( sll_node** ROOT, int data );
 int sll_add_at_position( sll_node** ROOT, int pos, int data );
 int sll_delete_begining( sll_node** ROOT );
-
+int sll_delete_at_position( sll_node** ROOT, int pos );
 
 #endif // DYN_DS_L_H_INCLUDED

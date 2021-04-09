@@ -18,4 +18,6 @@ int main(){ //main here is to test all the library functions
 	sll_delete_begining(&root);
 	sll_print_all(root);
 	
+	sll_delete_at_position(&root, 5);
+	sll_print_all(root);
 }
