@@ -19,9 +19,9 @@ build stuff here...
 
 | PS no.|     Name	|   Features  | Issuess Raised | Issues Resolved | No. test Cases | test Case Pass | 
 | -----	| ------------- | ----------- | -------------- | --------------- | -------------- | -------------- |
-| 123	|  yaseer	|  xyz	      |      x 	       |      y		 |       100      |      99        |
+| 123	|    Yaseer	|   xyz	      |      x 	       |      y		 |       100      |      99        |
 
-Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contributors stats in much detail.
+Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contributors stats in detail.
 
 ## Challenges Faced, Overcomes
 
