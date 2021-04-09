@@ -10,19 +10,18 @@ USERDEFINED SOURCE C FILE INCLUDES FUNCTION DEFINTIONS
 
 
 /************************ Function definitions ******************/
-int sll_append(sll_node **ROOT, int d){
-    sll_node* temp = NULL;
-    temp = (sll_node*) malloc(sizeof(sll_node));    //dynamic allocation
+int sll_append( sll_node **ROOT, int data ){ //appends an element at the end
+    sll_node* temp = (sll_node*) malloc(sizeof(sll_node));    //dynamic allocation
     if( temp == NULL ) return -1;   //if failed allocation
 
-    temp->data = d;
+    temp->data = data;
     if( *ROOT == NULL ){
         *ROOT = temp;
         temp->link = NULL;
     }
     else{
         sll_node* p = *ROOT;
-        while( p->link != NULL) p = p->link;
+        while( p->link != NULL ) p = p->link;
         p->link = temp;
         temp->link = NULL;
     }
@@ -30,9 +29,9 @@ int sll_append(sll_node **ROOT, int d){
     return 1;
 }
 
-void sll_printall(sll_node* root){
+void sll_print_all( sll_node* root ){  //prints all the datas in
     sll_node* temp = root;
-    if(root == NULL) printf("\n Singly-linked list is empty!!\n\n");
+    if( root == NULL ) printf("\n Singly-linked list is empty!!\n\n");
     else{
         printf("\n");
         while( temp->link != NULL ){
@@ -41,5 +40,57 @@ void sll_printall(sll_node* root){
         }
     }
     printf("%d", temp->data);
+}
+
+int sll_len(sll_node* root){    //returns length of SLL
+    int len = 0;
+    sll_node* temp = root;
+    while( temp->link != NULL ){
+        temp = temp->link;
+        len++;
+    }
+    if( temp->link == NULL ) len++;
+
+    return len;
+}
+
+int sll_add_at_begining( sll_node** ROOT, int data ){    //adds an element at begening
+    sll_node* temp = (sll_node*) malloc(sizeof(sll_node));
+    if( temp == NULL ) return -1;
+
+    temp->data = data;
+    temp->link = NULL;
+    if( *ROOT == NULL ) *ROOT = temp;
+    else{
+        temp->link = *ROOT;
+        *ROOT = temp;
+    }
+
+    return 1;
+}
+
+int sll_add_at_position( sll_node** ROOT, int pos, int data ){
+    if( pos > sll_len(*ROOT) ) return -1;
+    if( pos == 1 ) sll_add_at_begining(ROOT, data);
+    if( pos == sll_len(*ROOT) ) sll_append(ROOT, data);
+    else{
+        sll_node* temp = (sll_node*) malloc(sizeof(sll_node));
+        temp->data = data;
+        if( temp == NULL ) return -1;
+        else{
+            sll_node* p = *ROOT;
+            int index = 0;
+            while( index != pos-1 ){
+                p = p->link;
+                index++;
+            }
+            // swap operation
+            sll_node* q = p->link;
+            p->link = temp;
+            temp->link = q;
+        }
+    }
+
+    return 1;
 }
 

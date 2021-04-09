@@ -19,8 +19,12 @@ typedef struct sll_node{
 
 
 /****************************** Function prototypings *************************/
-int sll_append( sll_node **ROOT, int d );
-void sll_printall( sll_node *root);
+int sll_append( sll_node **ROOT, int data );
+void sll_print_all( sll_node *root );
+int sll_len( sll_node* root );
+int sll_add_at_begining( sll_node** ROOT, int data );
+int sll_add_at_position( sll_node** ROOT, int pos, int data );
+
 
 
 #endif // DYN_DS_L_H_INCLUDED
