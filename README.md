@@ -5,20 +5,23 @@
 build stuff here...
 
 
-## folder Structure
+## Folder Structure
 
-|   Folder    	  | Description |
-| --------------- | ----------- |
-| 1_Requirements  | Title       |
-| 2_Design	  | Text        |
-| 3_Implementation| Text        |
-| 4_test_plan	  | Text        |
+|         Folder    	  | 			Description 		    |
+| ----------------------- | ----------------------------------------------- |
+| 	1_Requirements    | Documents detailing requirements and research   |
+| 	2_Design	  | Documents specifying design details        	    |
+| 	3_Implementation  | All code and documentation        		    |
+| 	4_test_plan	  | Documents with test plans and procedures        |
+
 
 ## Contributors List and Summary
 
 | PS no.|     Name	|   Features  | Issuess Raised | Issues Resolved | No. test Cases | test Case Pass | 
 | -----	| ------------- | ----------- | -------------- | --------------- | -------------- | -------------- |
-| 123	|  my name obv.	|  xyz	      |    x 	       |      y		 |       100      |      99        |
+| 123	|  yaseer	|  xyz	      |      x 	       |      y		 |       100      |      99        |
+
+Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contributors stats in much detail.
 
 ## Challenges Faced, Overcomes
 
