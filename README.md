@@ -1,6 +1,6 @@
-# Dynamic Data-Structure Library
+# SDLC Activity Based Learning
 
-## SDLC Activity Based Learning
+![alt_text](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/images/datastructc.png)
 
 build stuff here...
 
