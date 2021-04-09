@@ -10,7 +10,7 @@ USERDEFINED SOURCE C FILE INCLUDES FUNCTION DEFINTIONS
 
 
 /************************ Function definitions ******************/
-int sll_append( sll_node **ROOT, int data ){ //appends an element at the end
+int sll_append( sll_node **ROOT, int data ){	//appends an element at the end
     sll_node* temp = (sll_node*) malloc(sizeof(sll_node));    //dynamic allocation
     if( temp == NULL ) return -1;   //if failed allocation
 
@@ -29,7 +29,7 @@ int sll_append( sll_node **ROOT, int data ){ //appends an element at the end
     return 1;
 }
 
-void sll_print_all( sll_node* root ){  //prints all the datas in
+void sll_print_all( sll_node* root ){ 	//prints all the data in SLL
     sll_node* temp = root;
     if( root == NULL ) printf("\n Singly-linked list is empty!!\n\n");
     else{
@@ -39,7 +39,7 @@ void sll_print_all( sll_node* root ){  //prints all the datas in
             temp = temp->link;
         }
     }
-    printf("%d", temp->data);
+    printf("%d\n", temp->data);
 }
 
 int sll_len(sll_node* root){    //returns length of SLL
@@ -69,10 +69,10 @@ int sll_add_at_begining( sll_node** ROOT, int data ){    //adds an element at be
     return 1;
 }
 
-int sll_add_at_position( sll_node** ROOT, int pos, int data ){
+int sll_add_at_position( sll_node** ROOT, int pos, int data ){	//adds element at given position
     if( pos > sll_len(*ROOT) ) return -1;
     if( pos == 1 ) sll_add_at_begining(ROOT, data);
-    if( pos == sll_len(*ROOT) ) sll_append(ROOT, data);
+    if( pos == sll_len(*ROOT)-1 ) sll_append(ROOT, data);
     else{
         sll_node* temp = (sll_node*) malloc(sizeof(sll_node));
         temp->data = data;
@@ -92,5 +92,17 @@ int sll_add_at_position( sll_node** ROOT, int pos, int data ){
     }
 
     return 1;
+}
+
+int sll_delete_begining( sll_node** ROOT ){	//deletes element at begining
+	if( *ROOT == NULL ) return -1; 
+	else {
+		sll_node* temp = *ROOT;
+		*ROOT = temp->link;
+		temp->link = NULL;
+		free(temp);
+	}
+	
+	return -1;
 }
 
