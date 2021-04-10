@@ -50,5 +50,6 @@ int main(){ //main here is to test all the library functions
 	q_pop(&front_);
 	q_print_all(front_);
 	
+	printf("\n%d\n", q_peek(front_, 5));
 	
 }

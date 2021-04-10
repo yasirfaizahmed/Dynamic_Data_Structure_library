@@ -53,7 +53,7 @@ int q_push(q_node** FRONT_, q_node** REAR_, int data);	//push operation
 void q_print_all( q_node* front_ );	//prints the whole queue
 int q_len( q_node* front_ );	//returns the length of queue
 int q_pop( q_node** FRONT_ );	//pops the first element
-
+int q_peek( q_node* front_, int pos );	//peeks and returns the element at given position
 
 
 

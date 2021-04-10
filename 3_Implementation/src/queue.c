@@ -2,7 +2,6 @@
 
 USERDEFINED SOURCE C FILE INCLUDES FUNCTION DEFINTIONS
 
-
 ******************************************************************/
 
 #include "dyn_ds_l.h"
@@ -64,7 +63,16 @@ int q_pop( q_node** FRONT_ ){	//pops the first element
 
 }
 
-
+int q_peek( q_node* front_, int pos){	//peeks and returns the element
+	int index = 0;
+	q_node* p = front_;
+	while( index < pos ){
+		p = p->link;
+		index++;
+	}
+	
+	return p->data;
+}
 
 
 
