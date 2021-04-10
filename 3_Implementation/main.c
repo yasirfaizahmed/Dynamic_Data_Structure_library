@@ -28,4 +28,13 @@ int main(){ //main here is to test all the library functions
 	sll_print_all(root);
 	
 	printf("\n%d\n", sll_peek(root, 6));
+	
+	sll_overwrite(&root, 5, 6969);
+	sll_print_all(root);
+	
+	sll_sort_bubble(&root, 'd');
+	sll_print_all(root);
+	
+	sll_sort_insertion(&root);
+	sll_print_all(root);
 }

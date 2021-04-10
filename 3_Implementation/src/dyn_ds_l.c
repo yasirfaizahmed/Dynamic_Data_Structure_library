@@ -9,7 +9,8 @@ USERDEFINED SOURCE C FILE INCLUDES FUNCTION DEFINTIONS
 #include "dyn_ds_l.h"
 
 
-/************************ Function definitions ******************/
+/********************************* Function definitions ****************************/
+/****************** Basic functions ********************************/
 int sll_append( sll_node **ROOT, int data ){	//appends an element at the end
     sll_node* temp = (sll_node*) malloc(sizeof(sll_node));    //dynamic allocation
     if( temp == NULL ) return -1;   //if failed allocation
@@ -186,6 +187,51 @@ int sll_peek( sll_node* root, int pos ){	//peeks at position and returns it
 }
 
 
+int sll_overwrite( sll_node** ROOT, int pos, int data ){	//over-writes at position 
+	if( pos > sll_len(*ROOT) ) return -1;
+	else{
+		sll_node* temp = *ROOT;
+		int index = 0;
+		while( index != pos ){
+			temp = temp->link;
+			index++;
+		}
+		temp->data = data;
+	}
+	
+	return 1;
+}
 
+/****************** Advanced functions ***************************/
+int sll_sort_bubble( sll_node** ROOT, char mode ){	//bubble sorts, mode = a{assending}, mode = d{descending}
+	int len = sll_len(*ROOT);
+	for(int i=0;i<len;i++){
+		for(int j=i+1;j<len;j++){
+			if( (sll_peek(*ROOT, i) > sll_peek(*ROOT, j)) && (mode == 'a') ) sll_swap_data(ROOT, i, j);
+			if( (sll_peek(*ROOT, i) < sll_peek(*ROOT, j)) && (mode == 'd') ) sll_swap_data(ROOT, i, j);
+		}
+	}
+	
+	return 1;
+}
 
+int sll_sort_insertion( sll_node** ROOT ){	//insertion sort
+	int len = sll_len(*ROOT);
+	int i = 1, j = 2;
+	int temp_i, temp_j;
+	for(i=1;i<len;i++){
+		temp_i = i;
+		temp_j = j;
+		while( sll_peek(*ROOT, i) > sll_peek(*ROOT, j) ){
+			sll_swap_data(ROOT, i, j);
+			if( i!=1 && j!=2 ){
+				i--;j--;
+			}			
+		}
+		i = temp_i;
+		j = temp_j;
+		j++;
+	}
 
+	return 1;
+}

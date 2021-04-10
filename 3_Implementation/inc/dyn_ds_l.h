@@ -19,6 +19,7 @@ typedef struct sll_node{	//Singly-linked list structure typedef
 
 
 /****************************** Function prototypings *************************/
+/****************** Basic functions ********************************/
 int sll_append( sll_node **ROOT, int data );
 void sll_print_all( sll_node *root );
 int sll_len( sll_node* root );
@@ -29,5 +30,15 @@ int sll_delete_at_position( sll_node** ROOT, int pos );
 int sll_swap_data( sll_node** ROOT, int pos1, int pos2 );
 int sll_reverse_list( sll_node** ROOT );
 int sll_peek( sll_node* root, int pos );
+int sll_overwrite( sll_node** ROOT, int pos, int data );
+
+/****************** Advanced functions ***************************/
+int sll_sort_bubble( sll_node** ROOT, char mode );	//bubble sorts, mode = a{assending}, mode = d{descending}
+int sll_sort_insertion( sll_node** ROOT );	//insertion sort	(need to work on it)
+
+
+
+
+
 
 #endif // DYN_DS_L_H_INCLUDED
