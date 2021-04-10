@@ -1,8 +1,7 @@
 /*****************************************************************************************
+
 USERDEFINED HEADER INVLUDES MACRO DEFINITIONS, FUNCTION PROTOTYPING AND OTHER DEFINITIONS
 
----Include it in the directory where the source code is present.
----The data-type of the structure members can be costomized from the structure definition at line-15.
 ****************************************************************************************/
 
 #ifndef DYN_DS_L_H_INCLUDED
@@ -17,6 +16,14 @@ typedef struct sll_node{	//Singly-linked list structure typedef
     int data;
     struct sll_node* link;
 }sll_node;
+
+
+/************************** Queue structure, defines ************/
+typedef struct q_node{
+	int data;
+	struct q_node* link;
+}q_node;
+
 
 
 
@@ -41,7 +48,8 @@ int sll_sort_insertion( sll_node** ROOT );	//insertion sort	(need to work on it)
 sll_node* sll_return_address(sll_node *ROOT, int pos);	//returns the address of the node at given position
 
 
-
+/****************** Queue functions **********************************/
+int q_push(q_node** ROOT, int data);	//push operation
 
 
 #endif // DYN_DS_L_H_INCLUDED

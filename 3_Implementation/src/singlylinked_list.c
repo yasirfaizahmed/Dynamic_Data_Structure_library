@@ -1,8 +1,7 @@
 /******************************************************************
+
 USERDEFINED SOURCE C FILE INCLUDES FUNCTION DEFINTIONS
 
----Include it in the directory where the source code is present.
----The data-type of the structure members can be costomized from the structure definition at line-15.
 ******************************************************************/
 
 

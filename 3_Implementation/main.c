@@ -1,9 +1,12 @@
 #include "dyn_ds_l.h"
 
-struct sll_node* root = NULL;
+//struct sll_node* root = NULL;
+
+struct q_node* front_ = NULL;
+struct q_node* rear_ = NULL;
 
 int main(){ //main here is to test all the library functions
-    int n = 11;
+/*    int n = 11;
     while(n--) sll_append(&root, n);
     sll_print_all(root);
 
@@ -29,11 +32,15 @@ int main(){ //main here is to test all the library functions
 	
 	printf("\n%d\n", sll_peek(root, 6));
 	
-	sll_overwrite(&root, 5, 6969);
+	sll_overwrite(&root, 5, 69);
 	sll_print_all(root);
 	
 	sll_sort_bubble(&root, 'd');
 	sll_print_all(root);
 	
 	printf("\n%d\n", sll_return_address(root, 4));
+	*/
+	
+	int n = 11;
+	//while( n-- ) q_push(&q_root, n);
 }
