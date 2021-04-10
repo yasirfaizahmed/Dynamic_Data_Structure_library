@@ -127,6 +127,39 @@ int sll_delete_at_position( sll_node** ROOT, int pos ){	//deletes element at pas
 	return 1;
 }
 
+int sll_swap_data( sll_node** ROOT, int pos1, int pos2 ){	//swaps the data at pos1 with data at pos2
+	if( *ROOT == NULL ) return -1;
+	else{
+		//goin to first position
+		sll_node* temp1 = *ROOT;
+		int index = 0, temp_data;
+		while( index < pos1 ){
+			temp1 = temp1->link;
+			index++;
+		}
+		temp_data = temp1->data;
+		
+		//going to second position
+		index = 0;
+		sll_node* temp2 = *ROOT;
+		while( index < pos2 ){
+			temp2 = temp2->link;
+			index++;
+		}
+		//swaping here
+		temp1->data = temp2->data;
+		temp2->data = temp_data;
+		
+	}
+	
+	return 1;
+}
+
+
+
+
+
+
 
 
 
