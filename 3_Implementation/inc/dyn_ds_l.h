@@ -12,13 +12,16 @@ USERDEFINED HEADER INVLUDES MACRO DEFINITIONS, FUNCTION PROTOTYPING AND OTHER DE
 #include <stdio.h>
 
 /****************************** structure defintions *************************/
+/************************** SLL structure ************************/
 typedef struct sll_node{	//Singly-linked list structure typedef
     int data;
     struct sll_node* link;
 }sll_node;
 
 
+
 /****************************** Function prototypings *************************/
+/****************** SLL functions **********************************/
 /****************** Basic functions ********************************/
 int sll_append( sll_node **ROOT, int data );
 void sll_print_all( sll_node *root );
@@ -35,7 +38,7 @@ int sll_overwrite( sll_node** ROOT, int pos, int data );
 /****************** Advanced functions ***************************/
 int sll_sort_bubble( sll_node** ROOT, char mode );	//bubble sorts, mode = a{assending}, mode = d{descending}
 int sll_sort_insertion( sll_node** ROOT );	//insertion sort	(need to work on it)
-
+sll_node* sll_return_address(sll_node *ROOT, int pos);	//returns the address of the node at given position
 
 
 

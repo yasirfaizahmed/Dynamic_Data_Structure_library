@@ -35,6 +35,5 @@ int main(){ //main here is to test all the library functions
 	sll_sort_bubble(&root, 'd');
 	sll_print_all(root);
 	
-	sll_sort_insertion(&root);
-	sll_print_all(root);
+	printf("\n%d\n", sll_return_address(root, 4));
 }

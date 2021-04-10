@@ -215,23 +215,13 @@ int sll_sort_bubble( sll_node** ROOT, char mode ){	//bubble sorts, mode = a{asse
 	return 1;
 }
 
-int sll_sort_insertion( sll_node** ROOT ){	//insertion sort
-	int len = sll_len(*ROOT);
-	int i = 1, j = 2;
-	int temp_i, temp_j;
-	for(i=1;i<len;i++){
-		temp_i = i;
-		temp_j = j;
-		while( sll_peek(*ROOT, i) > sll_peek(*ROOT, j) ){
-			sll_swap_data(ROOT, i, j);
-			if( i!=1 && j!=2 ){
-				i--;j--;
-			}			
-		}
-		i = temp_i;
-		j = temp_j;
-		j++;
-	}
-
-	return 1;
+sll_node* sll_return_address(sll_node *ROOT, int pos){	//returns the address of the node at given position
+    sll_node* temp = ROOT;
+    int index = 0;
+    while( index < pos ){
+        temp = temp->link;
+        index++;
+    }
+    return temp;
 }
+
