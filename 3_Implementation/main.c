@@ -42,5 +42,13 @@ int main(){ //main here is to test all the library functions
 	*/
 	
 	int n = 11;
-	//while( n-- ) q_push(&q_root, n);
+	while( n-- ) q_push(&front_, &rear_, n);
+	q_print_all(front_);
+	
+	printf("\n%d\n", q_len(front_));
+	
+	q_pop(&front_);
+	q_print_all(front_);
+	
+	
 }

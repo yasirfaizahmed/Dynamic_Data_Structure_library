@@ -49,7 +49,17 @@ sll_node* sll_return_address(sll_node *ROOT, int pos);	//returns the address of 
 
 
 /****************** Queue functions **********************************/
-int q_push(q_node** ROOT, int data);	//push operation
+int q_push(q_node** FRONT_, q_node** REAR_, int data);	//push operation
+void q_print_all( q_node* front_ );	//prints the whole queue
+int q_len( q_node* front_ );	//returns the length of queue
+int q_pop( q_node** FRONT_ );	//pops the first element
+
+
+
+
+
+
+
 
 
 #endif // DYN_DS_L_H_INCLUDED

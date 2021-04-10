@@ -10,22 +10,61 @@ USERDEFINED SOURCE C FILE INCLUDES FUNCTION DEFINTIONS
 
 /********************************* Function definitions ****************************/
 /****************** Basic functions ********************************/
-int q_push( q_node** ROOT, int data ){	//push operation
+int q_push( q_node** FRONT_, q_node** REAR_, int data ){	//push operation
 	q_node* temp = (q_node*) malloc(sizeof(q_node));
 	if( temp == NULL ) return -1;
 	else{
 		temp->data = data;
-		if( front_ == NULL ){
-			front_ = temp;
+		if( *FRONT_ == NULL ){
+			*FRONT_ = temp;
+			*REAR_ = temp;
 			temp->link = NULL;
-			rear_ = temp;
 		}
 		else{
-			rear_->link = temp;
-			rear_ = temp;
+			(*REAR_)->link = temp;
+			*REAR_ = temp;
 			temp->link = NULL;
 		}
 	}
 	
 	return 1;
 }
+
+void q_print_all( q_node* front_ ){	//prints the whole queue
+	if( front_ == NULL ) printf("\nQueue is empty!!\n");
+	q_node* p = front_;
+	while( p->link != NULL ){
+		printf("%d-->",p->data);
+		p = p->link;
+	}
+	printf("%d\n", p->data);
+}
+
+
+int q_len( q_node* front_ ){	//returns the length of queue
+	int len = 0;
+	if( front_ == NULL ) return -1;
+	q_node* p = front_;
+	while( p->link != NULL ){
+		len++;
+		p = p->link;
+	}
+	len++;
+	
+	return len;
+}
+
+int q_pop( q_node** FRONT_ ){	//pops the first element
+	int data = (*FRONT_)->data;
+	q_node* temp = *FRONT_;
+	*FRONT_ = (*FRONT_)->link;
+	free(temp);	//freeing the node
+	
+	return data;
+
+}
+
+
+
+
+
