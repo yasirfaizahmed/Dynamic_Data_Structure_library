@@ -156,9 +156,34 @@ int sll_swap_data( sll_node** ROOT, int pos1, int pos2 ){	//swaps the data at po
 }
 
 
+int sll_reverse_list( sll_node** ROOT ){	//reverses the SLL
+	if( *ROOT == NULL ) return -1;
+	else{
+		int index = 0;
+		int len = sll_len(*ROOT);
+		while( index <= len/2 ){
+			sll_swap_data(ROOT, index, (len-index-1));
+			index++;
+		}
+	}
+	
+	return 1;
+}
 
-
-
+int sll_peek( sll_node* root, int pos ){	//peeks at position and returns it
+	if( root == NULL ) return -1;
+	sll_node* temp = root;
+	if( pos > sll_len(root) ) return -1;
+	else{
+		int index = 0;
+		while( index < pos ){
+			temp = temp->link;
+			index++;
+		}
+	}
+	
+	return temp->data;
+}
 
 
 

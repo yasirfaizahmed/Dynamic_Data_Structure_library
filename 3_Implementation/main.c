@@ -23,4 +23,9 @@ int main(){ //main here is to test all the library functions
 	
 	sll_swap_data(&root, 3, 6);
 	sll_print_all(root);
+	
+	sll_reverse_list(&root);
+	sll_print_all(root);
+	
+	printf("\n%d\n", sll_peek(root, 6));
 }

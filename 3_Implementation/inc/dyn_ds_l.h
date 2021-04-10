@@ -27,7 +27,7 @@ int sll_add_at_position( sll_node** ROOT, int pos, int data );
 int sll_delete_begining( sll_node** ROOT );
 int sll_delete_at_position( sll_node** ROOT, int pos );
 int sll_swap_data( sll_node** ROOT, int pos1, int pos2 );
-
-
+int sll_reverse_list( sll_node** ROOT );
+int sll_peek( sll_node* root, int pos );
 
 #endif // DYN_DS_L_H_INCLUDED
