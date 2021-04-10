@@ -30,17 +30,17 @@ typedef struct q_node{
 /****************************** Function prototypings *************************/
 /****************** SLL functions **********************************/
 /****************** Basic functions ********************************/
-int sll_append( sll_node **ROOT, int data );
-void sll_print_all( sll_node *root );
-int sll_len( sll_node* root );
-int sll_add_at_begining( sll_node** ROOT, int data );
-int sll_add_at_position( sll_node** ROOT, int pos, int data );
-int sll_delete_begining( sll_node** ROOT );
-int sll_delete_at_position( sll_node** ROOT, int pos );
-int sll_swap_data( sll_node** ROOT, int pos1, int pos2 );
-int sll_reverse_list( sll_node** ROOT );
-int sll_peek( sll_node* root, int pos );
-int sll_overwrite( sll_node** ROOT, int pos, int data );
+int sll_append( sll_node **ROOT, int data );	//appends element at the end
+void sll_print_all( sll_node *root );	//prints the whole SLL
+int sll_len( sll_node* root );	//returns the length of SLL
+int sll_add_at_begining( sll_node** ROOT, int data );	//adds the element at begining
+int sll_add_at_position( sll_node** ROOT, int pos, int data );	//adds at given position
+int sll_delete_begining( sll_node** ROOT );	//deletes the element at begining
+int sll_delete_at_position( sll_node** ROOT, int pos );	//deletes at given position
+int sll_swap_data( sll_node** ROOT, int pos1, int pos2 );	//swaps the elements 
+int sll_reverse_list( sll_node** ROOT );	//reverses the SLL
+int sll_peek( sll_node* root, int pos );	//peeks at given position 
+int sll_overwrite( sll_node** ROOT, int pos, int data );	//overwrites at given position
 
 /****************** Advanced functions ***************************/
 int sll_sort_bubble( sll_node** ROOT, char mode );	//bubble sorts, mode = a{assending}, mode = d{descending}
