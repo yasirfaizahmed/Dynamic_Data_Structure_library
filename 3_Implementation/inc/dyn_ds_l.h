@@ -25,7 +25,14 @@ typedef struct q_node{
 }q_node;
 
 
+/************************** SLL structure ************************/
+typedef struct bst_node{
+	int data;
+	struct bst_node* left;
+	struct bst_node* right;
+}bst_node;
 
+#define COUNT 10
 
 /****************************** Function prototypings *************************/
 /****************** SLL functions **********************************/
@@ -56,9 +63,10 @@ int q_pop( q_node** FRONT_ );	//pops the first element
 int q_peek( q_node* front_, int pos );	//peeks and returns the element at given position
 
 
-
-
-
+/****************** BST functions **********************************/
+int bst_append( bst_node** ROOT, int data );	//adds element to BST accordingly
+void bst_print_all( bst_node* root, int space );	//prints the whole SBT (I've copied this function totally from Stackoverflow, LOL !!)
+bst_node* bst_search_parent(bst_node **ROOT, int data, char mode);	//returns address of node p{parent}, c{current}
 
 
 

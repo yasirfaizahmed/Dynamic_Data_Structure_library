@@ -2,8 +2,10 @@
 
 //struct sll_node* root = NULL;
 
-struct q_node* front_ = NULL;
-struct q_node* rear_ = NULL;
+//struct q_node* front_ = NULL;
+//struct q_node* rear_ = NULL;
+
+struct bst_node* root = NULL;
 
 int main(){ //main here is to test all the library functions
 /*    int n = 11;
@@ -41,6 +43,7 @@ int main(){ //main here is to test all the library functions
 	printf("\n%d\n", sll_return_address(root, 4));
 	*/
 	
+	/*
 	int n = 11;
 	while( n-- ) q_push(&front_, &rear_, n);
 	q_print_all(front_);
@@ -51,5 +54,13 @@ int main(){ //main here is to test all the library functions
 	q_print_all(front_);
 	
 	printf("\n%d\n", q_peek(front_, 5));
+	*/
+	
+	int n = 11;
+	while( n-- ) bst_append(&root, n);
+	bst_append(&root, 12);
+	bst_print_all(root, 1);
+	
+	printf( "\n%d\n", (bst_search_parent(&root, 8, 'c'))->data );
 	
 }
