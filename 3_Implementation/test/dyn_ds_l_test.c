@@ -128,22 +128,40 @@ void test_sll_sort_bubble( void ){
 
 /******************* Queue test function definitions**************/
 void test_q_push( void ){
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+}
+
+void test_q_len( void ){
+	TEST_ASSERT_EQUAL(actual_len, q_len(front_));
+}
+
+void test_q_pop( void ){
+	TEST_ASSERT_EQUAL(1, q_pop(&front_));q_print_all(front_);actual_len--;
+	TEST_ASSERT_EQUAL(2, q_pop(&front_));q_print_all(front_);actual_len--;
+	TEST_ASSERT_EQUAL(3, q_pop(&front_));q_print_all(front_);actual_len--;
+	TEST_ASSERT_EQUAL(4, q_pop(&front_));q_print_all(front_);actual_len--;
+}
+
+void test_q_peek( void ){
+		TEST_ASSERT_EQUAL(5, q_peek(front_, pos++));
+		TEST_ASSERT_EQUAL(6, q_peek(front_, pos++));
+		TEST_ASSERT_EQUAL(7, q_peek(front_, pos++));
+		TEST_ASSERT_EQUAL(8, q_peek(front_, pos));
 }
 
 int main(){
 	UNITY_BEGIN();	//initilize the uinity framework
-	
 	//RUN_TEST macro needs function pointer, in our case for eg. test_sll_append (function name is also a function pointer, hehehe)
+	
 	/////// SLL testing
 	RUN_TEST(test_sll_append);	
 	printf("\n--------------------------------------------------------------------------\n");
@@ -179,17 +197,26 @@ int main(){
 	printf("\n--------------------------------------------------------------------------\n");
 	
 	RUN_TEST(test_sll_sort_bubble);
-	printf("\n--------------------------------------------------------------------------\n");
-	printf("\n--------------------------------------------------------------------------\n");
-	printf("\n--------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------------------------\n");
 	pos = 0;actual_len = 0;data = 0;
 	
 	////// Queue testing
 	RUN_TEST(test_q_push);
 	printf("\n--------------------------------------------------------------------------\n");
 	
+	RUN_TEST(test_q_len);
+	printf("\n--------------------------------------------------------------------------\n");
 	
+	RUN_TEST(test_q_len);
+	printf("\n--------------------------------------------------------------------------\n");
 	
+	RUN_TEST(test_q_pop);
+	printf("\n--------------------------------------------------------------------------\n");
+	
+	RUN_TEST(test_q_peek);
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	return UNITY_END();
 	
