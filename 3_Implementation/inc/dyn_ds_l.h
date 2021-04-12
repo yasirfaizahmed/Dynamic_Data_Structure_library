@@ -48,7 +48,6 @@ int sll_swap_data( sll_node** ROOT, int pos1, int pos2 );	//swaps the elements
 int sll_reverse_list( sll_node** ROOT );	//reverses the SLL
 int sll_peek( sll_node* root, int pos );	//peeks at given position 
 int sll_overwrite( sll_node** ROOT, int pos, int data );	//overwrites at given position
-
 /****************** Advanced functions ***************************/
 int sll_sort_bubble( sll_node** ROOT, char mode );	//bubble sorts, mode = a{assending}, mode = d{descending}
 int sll_sort_insertion( sll_node** ROOT );	//insertion sort	(need to work on it)
