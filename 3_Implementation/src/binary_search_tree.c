@@ -64,3 +64,19 @@ bst_node* bst_search_parent(bst_node **ROOT, int data, char mode){	//returns add
 }
 
 
+int bst_delete( bst_node** ROOT, int data ){	//deletes the given data, if not in the tree then return 0
+	bst_node* to_delete = bst_search_parent(ROOT, data, 'c');
+	bst_node* parent = bst_search_parent(ROOT, data, 'p');
+	
+	if( to_delete->data < parent->data ){
+		bst_node* temp = to_delete->left;	//search highest node in left sub-tree
+		while( temp->right != NULL ) temp = temp->right;
+		to_delete->data = temp->data;	//successor replacing the to_delete node
+		bst_node *to_free = bst_search_parent(&to_delete, temp->data, 'p');	//getting the parent address to free the successor memory
+		to_free->right = NULL;
+		free(temp);
+	}
+	
+}
+
+

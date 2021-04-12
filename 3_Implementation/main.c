@@ -7,7 +7,7 @@
 
 struct bst_node* root = NULL;
 
-int main(){ //main here is to test all the library functions
+int main(int argc, char** argv){ //main here is to test all the library functions
 /*    int n = 11;
     while(n--) sll_append(&root, n);
     sll_print_all(root);
@@ -56,11 +56,16 @@ int main(){ //main here is to test all the library functions
 	printf("\n%d\n", q_peek(front_, 5));
 	*/
 	
-	int n = 11;
-	while( n-- ) bst_append(&root, n);
-	bst_append(&root, 12);
+	int arr[] = {8, 3, 10, 1, 6, 14, 4, 7, 13};
+	int n = 0;
+    while(n < sizeof(arr)/sizeof(arr[0])){
+        bst_append(&root, arr[n]);
+        n++;
+    }
 	bst_print_all(root, 1);
 	
-	printf( "\n%d\n", (bst_search_parent(&root, 8, 'c'))->data );
+	//bst_delete(&root, 3);
+	bst_print_all(root, 1);
+	printf( "\n%d\n", (bst_search_parent(&root, 7, 'c'))->data );
 	
 }

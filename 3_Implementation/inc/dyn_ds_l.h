@@ -67,7 +67,7 @@ int q_peek( q_node* front_, int pos );	//peeks and returns the element at given 
 int bst_append( bst_node** ROOT, int data );	//adds element to BST accordingly
 void bst_print_all( bst_node* root, int space );	//prints the whole SBT (I've copied this function totally from Stackoverflow, LOL !!)
 bst_node* bst_search_parent(bst_node **ROOT, int data, char mode);	//returns address of node p{parent}, c{current}
-
+int bst_delete( bst_node** ROOT, int data );	//deletes the given data, if not in the tree then returns 0
 
 
 #endif // DYN_DS_L_H_INCLUDED
