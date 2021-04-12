@@ -31,7 +31,11 @@ void test_sll_len( void );
 void test_sll_add_at_begining( void );	
 void test_sll_add_at_position( void );
 void test_sll_delete_begining( void );
-
+void test_sll_delete_at_position( void );
+void test_sll_swap_data( void );
+void test_sll_reverse_list( void );
+void test_sll_peek( void );
+void test_sll_overwrite( void );
 
 /***************** test functions definitions **************************************/
 void test_sll_append( void ){	//appending 10 values to empty SLL
@@ -73,29 +77,73 @@ void test_sll_delete_begining( void ){
 
 }
 
+void test_sll_delete_at_position( void ){
+	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&root, pos));actual_len--;sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&root, pos));actual_len--;sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&root, pos));actual_len--;sll_print_all(root);
+}
+
+void test_sll_swap_data( void ){
+	TEST_ASSERT_EQUAL(1, sll_swap_data(&root, 0, sll_len(root)-1));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_swap_data(&root, 0, sll_len(root)-1));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_swap_data(&root, 0, sll_len(root)-1));sll_print_all(root);
+}
+
+void test_sll_reverse_list( void ){
+	TEST_ASSERT_EQUAL(1, sll_reverse_list(&root));sll_print_all(root);
+}
+	
+void test_sll_peek( void ){	
+	TEST_ASSERT_EQUAL(16, sll_peek(root, 0));
+	TEST_ASSERT_EQUAL(9, sll_peek(root, 1));
+	TEST_ASSERT_EQUAL(8, sll_peek(root, 2));
+	TEST_ASSERT_EQUAL(7, sll_peek(root, 3));
+}
+
+void test_sll_overwrite( void ){
+	pos = -1;
+	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
+}
 
 int main(){
 	UNITY_BEGIN();	//initilize the uinity framework
 	
-	RUN_TEST(test_sll_append);	//RUN_TEST macro needs function pointer, in our case for eg. test_sll_append (function name is also a function pointer hehe)
-	printf("\n --------------------------------------------------------------------------\n");
+	//RUN_TEST macro needs function pointer, in our case for eg. test_sll_append (function name is also a function pointer, hehehe)
+	RUN_TEST(test_sll_append);	
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	RUN_TEST(test_sll_len);	
-	printf("\n --------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	RUN_TEST(test_sll_add_at_begining);
-	printf("\n --------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	RUN_TEST(test_sll_len);	//testing sll_len again
-	printf("\n --------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	RUN_TEST(test_sll_add_at_position);
-	printf("\n --------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	RUN_TEST(test_sll_delete_begining);
-	printf("\n --------------------------------------------------------------------------\n");
+	printf("\n--------------------------------------------------------------------------\n");
 	
+	RUN_TEST(test_sll_delete_at_position);
+	printf("\n--------------------------------------------------------------------------\n");
 	
+	RUN_TEST(test_sll_swap_data);
+	printf("\n--------------------------------------------------------------------------\n");
+
+	RUN_TEST(test_sll_reverse_list);
+	printf("\n--------------------------------------------------------------------------\n");
+	
+	RUN_TEST(test_sll_peek);
+	printf("\n--------------------------------------------------------------------------\n");
+	
+	RUN_TEST(test_sll_overwrite);
+	printf("\n--------------------------------------------------------------------------\n");
 	
 	return UNITY_END();
 	
