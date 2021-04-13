@@ -7,7 +7,7 @@ PROJECT_NAME = dyn_ds_l
 
 # source files
 SRC = main.c src/binary_search_tree.c src/queue.c src/singly_linked_list.c
-TEST_SRC = test/dyn_ds_l_test.c src/binary_search_tree.c src/queue.c src/singly_linked_list.c unity/unity.c
+TEST_SRC = test/test_dyn_ds_l.c src/binary_search_tree.c src/queue.c src/singly_linked_list.c unity/unity.c
 
 # include files
 INC = -I inc
