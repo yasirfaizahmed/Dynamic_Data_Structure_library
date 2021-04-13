@@ -50,7 +50,7 @@ int sll_peek( sll_node* root, int pos );	//peeks at given position
 int sll_overwrite( sll_node** ROOT, int pos, int data );	//overwrites at given position
 /****************** Advanced functions ***************************/
 int sll_sort_bubble( sll_node** ROOT, char mode );	//bubble sorts, mode = a{assending}, mode = d{descending}
-int sll_sort_insertion( sll_node** ROOT );	//insertion sort	(need to work on it)
+int sll_sort_insertion( sll_node** ROOT );	//	(not working)
 sll_node* sll_return_address(sll_node *ROOT, int pos);	//returns the address of the node at given position
 
 
@@ -66,7 +66,10 @@ int q_peek( q_node* front_, int pos );	//peeks and returns the element at given 
 int bst_append( bst_node** ROOT, int data );	//adds element to BST accordingly
 void bst_print_all( bst_node* root, int space );	//prints the whole SBT (I've copied this function totally from Stackoverflow, LOL !!)
 bst_node* bst_search_parent(bst_node **ROOT, int data, char mode);	//returns address of node p{parent}, c{current}
-int bst_delete( bst_node** ROOT, int data );	//deletes the given data, if not in the tree then returns 0
+int bst_delete( bst_node** ROOT, int data );	// (not working)
+void bst_inorder_traverse( bst_node* root );	//in-order traversing
+void bst_preorder_traverse( bst_node* root );	//pre-order traversing
+void bst_postorder_traverse( bst_node* root );	//post-order traversing
 
 
 #endif // DYN_DS_L_H_INCLUDED

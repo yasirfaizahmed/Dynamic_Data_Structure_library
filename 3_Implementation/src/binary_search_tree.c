@@ -79,4 +79,29 @@ int bst_delete( bst_node** ROOT, int data ){	//deletes the given data, if not in
 	
 }
 
+void bst_inorder_traverse(struct bst_node* ROOT){
+    if(ROOT == NULL) return;
+
+    bst_inorder_traverse(ROOT->left);
+    printf("%d ", ROOT->data);
+    bst_inorder_traverse(ROOT->right);
+}
+
+void bst_preorder_traverse(struct bst_node* ROOT){
+    if(ROOT == NULL) return;
+
+    printf("%d ", ROOT->data);
+    bst_preorder_traverse(ROOT->left);
+    bst_preorder_traverse(ROOT->right);
+}
+
+void bst_postorder_traverse(struct bst_node* ROOT){
+    if(ROOT == NULL) return;
+
+    bst_postorder_traverse(ROOT->left);
+    bst_postorder_traverse(ROOT->right);
+    printf("%d ", ROOT->data);
+
+}
+
 

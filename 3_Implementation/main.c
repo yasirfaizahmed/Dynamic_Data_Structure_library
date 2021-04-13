@@ -67,5 +67,8 @@ int main(int argc, char** argv){ //main here is to test all the library function
 	//bst_delete(&root, 3);
 	bst_print_all(root, 1);
 	printf( "\n%d\n", (bst_search_parent(&root, 7, 'c'))->data );
+	bst_inorder_traverse(root);
+	bst_preorder_traverse(root);
+	bst_postorder_traverse(root);
 	
 }
