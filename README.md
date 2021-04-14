@@ -24,12 +24,13 @@ build stuff here...
 Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contributors stats in detail.
 
 ## Challenges Faced, Overcomes
+### Challenge 
+• As mentioned in [1_requirements](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/tree/master/1_Requirements), I was facing a problem of passing the structure pointer evertime a funciton which modifies the list/tree is called this actaully got my head scratched since I did'nt wanted to keep passing the pointer everytime from function to function.
 
-	• challenge 1 
-	• challenge 2
 
-	• overcome 1
-	• overcome 2
+### How I overcame
+• I just posted my question on [STACKOVERFLOW](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi)
+
 
 ## Learning Resources
 
