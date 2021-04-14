@@ -9,7 +9,7 @@ So this library is about that creating, handeling Data structures in C like Sing
 
 ## Research
 
-Well talking about research here, so most of the stuff I got to know about the concepts in Data-structures are from 4th semester syllabus "Data structures and Algorithms", glad I had a good teacher else I would be struggling like others, so anyways.. I got some more concepts from Data-structure classes on Youtube channels. 
+Well talking about research here, so most of the stuff I got to know about the concepts in Data-structures are from 4th semester syllabus "Data structures and Algorithms", glad I had a good teacher else I would be struggling like others, so anyways.. I got some more concepts from Data-structure classes on [Youtube](https://www.youtube.com/c/NareshIT) channels. 
 
 ## Cost and Features
 
