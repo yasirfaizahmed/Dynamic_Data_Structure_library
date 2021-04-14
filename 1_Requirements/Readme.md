@@ -39,7 +39,11 @@ Each of these can do all the below functions totally dynamically!
 
 ## Defining Our System
 
-![OUR SYSTEM](https://lucid.app/lucidchart/73ac1a77-d7df-4c04-a5d6-cf28b367474f/edit?beaconFlowId=E9F02156530FBBD5&page=0_0#)
+The whole system is collection of diffrent data-structures, in out case its composed of Singly-linked list, binary search trees and Queues.
+
+![OUR SYSTEM](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/1_Requirements/OUR%20SYSTEM.png)
+
+Each of these sub-structure has their own basic functional units called objects(not related to OOP), which has ability to link to another similar object and of-course the allocation is totally dynamic.
 
 ## SOWT Analysis
 
