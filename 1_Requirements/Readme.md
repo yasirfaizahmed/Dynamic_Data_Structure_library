@@ -47,7 +47,7 @@ Each of these sub-structure has their own basic functional units called objects(
 
 ## SOWT Analysis
 
-SOWT stuff here
+![swot](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/1_Requirements/Data-1.png)
 
 ## 4W's 1'H
 
