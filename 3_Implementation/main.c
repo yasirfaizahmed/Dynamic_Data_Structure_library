@@ -44,7 +44,7 @@ int main(int argc, char** argv){ //main here is to test all the library function
 	
 	
 	
-	int n = 11;
+	n = 11;
 	while( n-- ) q_push(&front_, &rear_, n);
 	q_print_all(front_);
 	
@@ -59,18 +59,18 @@ int main(int argc, char** argv){ //main here is to test all the library function
 	
 	
 	int arr[] = {8, 3, 10, 1, 6, 14, 4, 7, 13};
-	int n = 0;
+	n = 0;
     while(n < sizeof(arr)/sizeof(arr[0])){
-        bst_append(&root, arr[n]);
+        bst_append(&bst_root, arr[n]);
         n++;
     }
-	bst_print_all(root, 1);
+	bst_print_all(bst_root, 1);
 	
 	//bst_delete(&root, 3);
-	bst_print_all(root, 1);
-	printf( "\n%d\n", (bst_search_parent(&root, 7, 'c'))->data );
-	bst_inorder_traverse(root);
-	bst_preorder_traverse(root);
-	bst_postorder_traverse(root);
+	bst_print_all(bst_root, 1);
+	printf( "\n%d\n", (bst_search_parent(&bst_root, 7, 'c'))->data );
+	bst_inorder_traverse(bst_root);
+	bst_preorder_traverse(bst_root);
+	bst_postorder_traverse(bst_root);
 	
 }
