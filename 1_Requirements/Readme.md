@@ -9,7 +9,9 @@ So this library is about that creating, handeling Data structures in C like Sing
 
 ## Research
 
-Well talking about research here, so most of the stuff I got to know about the concepts in Data-structures are from 4th semester syllabus "Data structures and Algorithms", glad I had a good teacher else I would be struggling like others, so anyways.. I got some more concepts from Data-structure classes on [Youtube](https://www.youtube.com/c/NareshIT) channels. 
+Well talking about research here, so most of the stuff I got to know about the concepts in Data-structures are from 4th semester syllabus "Data structures and Algorithms", glad I had a good teacher else I would be struggling like others, so anyways.. I got some more concepts from Data-structure classes on [Youtube](https://www.youtube.com/c/NareshIT) channel. 
+
+And it turns out even I did alot of research, well here's my [question](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi) on Stackoverflow when I was actually struggling to make functions on Data structures, and the answer given was so well put I got inspired!! , like really...
 
 ## Cost and Features
 
