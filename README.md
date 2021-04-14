@@ -21,21 +21,31 @@ build stuff here...
 | -----	| ------------- | ----------- | -------------- | --------------- | -------------- | -------------- |
 | 1	|    Yaseer	|   almost all	      |      Nil 	       |     Nil	 |       17      |      17        |
 
-Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contributors stats in detail.
+Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contribution stats in detail.
 
 ## Challenges Faced, Overcomes
-### Challenge 
+### Challenge 1
 • As mentioned in [1_requirements](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/tree/master/1_Requirements), I was facing a problem of passing the structure pointer evertime a funciton which modifies the list/tree is called this actaully got my head scratched since I did'nt wanted to keep passing the pointer everytime from function to function.
 
+### How I overcame 1
+• I just posted my question on [STACKOVERFLOW](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi) and it turns out I got the answer on how to do it the right way, And rest of the code development went very smooth.
 
-### How I overcame
-• I just posted my question on [STACKOVERFLOW](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi)
+### Challenge 2
+• Need a much simpler way to initilize the list/ tree 
+Present way,
+
+          sll_node* root = NULL;  //initilizing the list
+          sll_append(&root, val); //starting to append the first element to it
+
+### How I overcame 2
+• I still need to figure out, need help here
 
 
 ## Learning Resources
 
-1. [link_text1](https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3#:~:text=A%20great%20README%20file%20helps,basic%20introduction%20to%20the%20software.)	
-
-2. [link_text2](https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3#:~:text=A%20great%20README%20file%20helps,basic%20introduction%20to%20the%20software.)
+1. [Youtube](https://www.youtube.com/c/NareshIT)
+2. git [Documentation] came very handy
+3. Of-course the [md](https://guides.github.com/features/mastering-markdown/) file guide from here
+4. [Makefile](https://makefiletutorial.com/) tutorial.
 
 
