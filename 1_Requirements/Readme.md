@@ -39,7 +39,7 @@ Each of these can do all the below functions totally dynamically!
 
 ## Defining Our System
 
-[OUR SYSTEM](https://lucid.app/lucidchart/73ac1a77-d7df-4c04-a5d6-cf28b367474f/edit?beaconFlowId=E9F02156530FBBD5&page=0_0#)
+![OUR SYSTEM](https://lucid.app/lucidchart/73ac1a77-d7df-4c04-a5d6-cf28b367474f/edit?beaconFlowId=E9F02156530FBBD5&page=0_0#)
 
 ## SOWT Analysis
 
