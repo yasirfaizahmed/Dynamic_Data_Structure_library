@@ -27,13 +27,14 @@ This library till now can handle/ manage
 All of these are written in diffrent source files, so it will be easier to handle debugging later. 
 
 Each of these can do
-    • Initilize 
-    • append an element
-    • delete an element
-    • over-write an element
-    • swap an element
-    • return strucutre length
-    • Even sort (both ascending and descending order!!!)
+
+        • Initilize 
+        • append an element
+        • delete an element
+        • over-write an element
+        • swap an element
+        • return strucutre length
+        • Even sort (both ascending and descending order!!!)
 
 
 ## Defining Our System
