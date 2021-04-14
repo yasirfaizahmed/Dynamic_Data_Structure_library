@@ -12,6 +12,7 @@
 
 
 /********************* definitiosn for other libs to work *****************************/
+sll_node* sll_root = NULL;	//lets start with an empty SLL
 sll_node* root = NULL;	//lets start with an empty SLL
 int actual_len = 0;
 int data = 0;	//just a test data, increment this everytime when it gets inserted into SLL
@@ -50,19 +51,17 @@ void test_q_peek( void );
 
 /***************** test functions definitions **************************************/
 /******************* SLL test function definitions**************/
-void test_sll_append( void ){	//appending 10 values to empty SLL
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));	//appending values to SLL, if sucess, it returns 1 else -1
-	actual_len++;				//incrementing the actual_len to test the test_sll_len later if needed
-	sll_print_all(root);		//to visualize the SLL
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_append(&root, ++data));actual_len++;sll_print_all(root);
+void test_sll_append( void ){	//testing sll_append
+	int rand_val = rand();	//generating random value
+	int actual_val;
+	sll_append(&sll_root, rand_val);	//appending that random value
+	sll_node* temp = sll_root;			
+	while( temp->link != NULL )temp = temp->link;	//going to the last node to fetch
+	actual_val = temp->data;
+	temp = NULL;	//releasing the pointer
+	TEST_ASSERT(rand_val == actual_val);	//comparing to the last node's actual value to rand_value
+	
+	
 }
 
 void test_sll_len( void ){	//testing sll_len function
@@ -166,7 +165,7 @@ void test_q_peek( void ){
 int main(){
 	UNITY_BEGIN();	//initilize the uinity framework
 	//RUN_TEST macro needs function pointer, in our case for eg. test_sll_append (function name is also a function pointer, hehehe)
-	
+	/*
 	/////// SLL testing
 	RUN_TEST(test_sll_append);	
 	printf("\n--------------------------------------------------------------------------\n");
@@ -223,27 +222,14 @@ int main(){
 	RUN_TEST(test_q_peek);
 	printf("\n--------------------------------------------------------------------------\n");
 	
+	*/
+	
+	RUN_TEST(test_sll_append);
+	
+	RUN_TEST(test_sll_len);
+	
 	return UNITY_END();
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
