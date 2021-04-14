@@ -26,7 +26,7 @@ This library till now can handle/ manage
     • Binary Search Trees
 All of these are written in diffrent source files, so it will be easier to handle debugging later. 
 
-Each of these can do
+Each of these can do all the below functions totally dynamically!
 
         • Initilize 
         • append an element
@@ -39,7 +39,7 @@ Each of these can do
 
 ## Defining Our System
 
-somethig related to tht here
+[OUR SYSTEM](https://lucid.app/lucidchart/73ac1a77-d7df-4c04-a5d6-cf28b367474f/edit?beaconFlowId=E9F02156530FBBD5&page=0_0#)
 
 ## SOWT Analysis
 
