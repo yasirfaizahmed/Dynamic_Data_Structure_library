@@ -17,9 +17,9 @@ build stuff here...
 
 ## Contributors List and Summary
 
-| PS no.|     Name	|   Features  | Issuess Raised | Issues Resolved | No. test Cases | test Case Pass | 
+| PS no.|     Name	|   Features added  | Issuess Raised | Issues Resolved | No. test Cases | test Case Pass | 
 | -----	| ------------- | ----------- | -------------- | --------------- | -------------- | -------------- |
-| 123	|    Yaseer	|   xyz	      |      x 	       |      y		 |       100      |      99        |
+| 1	|    Yaseer	|   almost all	      |      Nil 	       |     Nil	 |       17      |      17        |
 
 Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/graphs/contributors) to see the contributors stats in detail.
 
