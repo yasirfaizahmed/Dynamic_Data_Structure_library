@@ -2,7 +2,9 @@
 
 ![my_pic](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/1_Requirements/datastructc.png)
 
-[![C/C++ CI - Build](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml/badge.svg?branch=master&event=push)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml)
+|         Build     |         Code Quality        |         Unity     |         Git Inspector       |
+|-------------------|-----------------------------|-------------------|-----------------------------|
+|[![C/C++ CI](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml/badge.svg?branch=master&event=push)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml)|              |                   |                   |
 
 
 ## Folder Structure
