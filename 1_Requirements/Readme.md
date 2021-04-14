@@ -9,13 +9,32 @@ So this library is about that creating, handeling Data structures in C like Sing
 
 ## Research
 
-Well talking about research here, so most of the stuff I got to know about the concepts in Data-structures are from 4th semester syllabus "Data structures and Algorithms", glad I had a good teacher else I would be struggling like others, so anyways.. I got some more concepts from Data-structure classes on [Youtube](https://www.youtube.com/c/NareshIT) channel. 
+Well talking about research here, so most of the stuff I got to know about the concepts in Data-structures are from 4th semester syllabus "Data structures and Algorithms", glad I had a good teacher else I would be struggling like others, so anyways.. I got some more concepts from Data-structure classes on [YOUTUBE](https://www.youtube.com/c/NareshIT) channel. 
 
-And it turns out even I did alot of research, well here's my [question](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi) on Stackoverflow when I was actually struggling to make functions on Data structures, and the answer given was so well put I got inspired!! , like really...
+And it turns out even I did alot of research, well here's my [QUESTION](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi) on Stackoverflow when I was actually struggling to make functions on Data structures, and the answer given was so well put I got inspired!! , like really... Other than that I did'nt really went through books for concepts.
 
 ## Cost and Features
 
-cost and features
+### Cost 
+
+N/A
+
+### Features
+This library till now can handle/ manage 
+    • Singly- Linked lists
+    • Queues 
+    • Binary Search Trees
+All of these are written in diffrent source files, so it will be easier to handle debugging later. 
+
+Each of these can do
+    • Initilize 
+    • append an element
+    • delete an element
+    • over-write an element
+    • swap an element
+    • return strucutre length
+    • Even sort (both ascending and descending order!!!)
+
 
 ## Defining Our System
 
