@@ -1,6 +1,6 @@
 # SDLC Activity Based Learning
 
-![my_pic](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/images/datastructc.png)
+![my_pic](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/1_Requirements/datastructc.png)
 
 build stuff here...
 
@@ -25,11 +25,11 @@ Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/gr
 
 ## Challenges Faced, Overcomes
 
-	• challenge 1 
-	• challenge 2
+	â€¢ challenge 1 
+	â€¢ challenge 2
 
-	• overcome 1
-	• overcome 2
+	â€¢ overcome 1
+	â€¢ overcome 2
 
 ## Learning Resources
 
