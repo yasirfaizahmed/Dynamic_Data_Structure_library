@@ -44,7 +44,7 @@ Present way,
 ## Learning Resources
 
 1. [Youtube](https://www.youtube.com/c/NareshIT)
-2. git [Documentation] came very handy
+2. git [Documentation](https://git-scm.com/docs/gittutorial) came very handy
 3. Of-course the [md](https://guides.github.com/features/mastering-markdown/) file guide from here
 4. [Makefile](https://makefiletutorial.com/) tutorial.
 
