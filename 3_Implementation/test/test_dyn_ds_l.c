@@ -14,9 +14,13 @@
 /********************* definitiosn for other libs to work *****************************/
 sll_node* sll_root = NULL;	//lets start with an empty SLL
 sll_node* root = NULL;	//lets start with an empty SLL
-int actual_len = 0;
-int data = 0;	//just a test data, increment this everytime when it gets inserted into SLL
+sll_node* temp = NULL;	//for moving accross the LLs
 int pos = 0;	//just a testing poition value to work with SLL
+int actual_val;	//for testing ASSERTS
+int rand_val;
+
+int actual_len;
+int data;
 
 q_node* front_ = NULL;
 q_node* rear_ = NULL;
@@ -52,56 +56,81 @@ void test_q_peek( void );
 /***************** test functions definitions **************************************/
 /******************* SLL test function definitions**************/
 void test_sll_append( void ){	//testing sll_append
-	int rand_val = rand();	//generating random value
-	int actual_val;
+	rand_val = rand();	//generating random value
 	sll_append(&sll_root, rand_val);	//appending that random value
-	sll_node* temp = sll_root;			
+	temp = sll_root;			
 	while( temp->link != NULL )temp = temp->link;	//going to the last node to fetch
 	actual_val = temp->data;
 	temp = NULL;	//releasing the pointer
 	TEST_ASSERT(rand_val == actual_val);	//comparing to the last node's actual value to rand_value
 	
-	
 }
 
 void test_sll_len( void ){	//testing sll_len function
-	TEST_ASSERT_EQUAL(actual_len, sll_len(root));sll_print_all(root);
+	temp = sll_root;
+	actual_val = 0;
+	while( temp->link != NULL ){
+		temp = temp->link;
+		actual_val++;
+	}
+	actual_val++;
+	temp = NULL;	//releasing the pointer
+	TEST_ASSERT(actual_val == sll_len(sll_root));
+	
 }
 
 void test_sll_add_at_begining( void ){
-	TEST_ASSERT_EQUAL(1, sll_add_at_begining(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_add_at_begining(&root, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_add_at_begining(&root, ++data));actual_len++;sll_print_all(root);
+	rand_val = rand();
+	sll_add_at_begining(&sll_root, rand_val);
+	temp = sll_root;
+	actual_val = temp->data;	//first element value
+	temp = NULL;	//releasing the pointer
+	TEST_ASSERT(actual_val == rand_val);
 	
 }
 
 void test_sll_add_at_position( void ){
-	TEST_ASSERT_EQUAL(1, sll_add_at_position(&root, ++pos, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_add_at_position(&root, ++pos, ++data));actual_len++;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_add_at_position(&root, ++pos, ++data));actual_len++;sll_print_all(root);
+	rand_val = rand();
+	sll_add_at_position(&sll_root, ++pos, rand_val);
+	temp = sll_root;
+	int index = 0;
+	while( index != pos ){
+		temp = temp->link;
+		index++;
+	}
+	actual_val = temp->data;
+	temp = NULL;
+	TEST_ASSERT(actual_val == rand_val);
+	
 }
 
 void test_sll_delete_begining( void ){
-	TEST_ASSERT_EQUAL(1, sll_delete_begining(&root));actual_len--;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_delete_begining(&root));actual_len--;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_delete_begining(&root));actual_len--;sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));actual_len = sll_len(sll_root);
+	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));actual_len = sll_len(sll_root);
+	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));actual_len = sll_len(sll_root);
 
 }
 
 void test_sll_delete_at_position( void ){
-	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&root, pos));actual_len--;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&root, pos));actual_len--;sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&root, pos));actual_len--;sll_print_all(root);
+	sll_append(&sll_root, rand());
+	sll_append(&sll_root, rand());
+	sll_append(&sll_root, rand());		//adding some elements so that the LL is always filled and not empty
+	sll_append(&sll_root, rand());
+	sll_append(&sll_root, rand());
+	pos = sll_len(sll_root);
+	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&sll_root, --pos));
+	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&sll_root, --pos));
+	TEST_ASSERT_EQUAL(1, sll_delete_at_position(&sll_root, --pos));
 }
 
 void test_sll_swap_data( void ){
-	TEST_ASSERT_EQUAL(1, sll_swap_data(&root, 0, sll_len(root)-1));sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_swap_data(&root, 0, sll_len(root)-1));sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_swap_data(&root, 0, sll_len(root)-1));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_swap_data(&sll_root, 0, sll_len(sll_root)-1));
+	TEST_ASSERT_EQUAL(1, sll_swap_data(&sll_root, 0, sll_len(sll_root)-1));
+	TEST_ASSERT_EQUAL(1, sll_swap_data(&sll_root, 0, sll_len(sll_root)-1));
 }
 
 void test_sll_reverse_list( void ){
-	TEST_ASSERT_EQUAL(1, sll_reverse_list(&root));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_reverse_list(&sll_root));
 }
 	
 void test_sll_peek( void ){	
@@ -227,6 +256,18 @@ int main(){
 	RUN_TEST(test_sll_append);
 	
 	RUN_TEST(test_sll_len);
+	
+	RUN_TEST(test_sll_add_at_begining);
+	
+	RUN_TEST(test_sll_add_at_position);
+	
+	RUN_TEST(test_sll_delete_begining);
+	
+	RUN_TEST(test_sll_delete_at_position);
+	
+	RUN_TEST(test_sll_swap_data);
+	
+	RUN_TEST(test_sll_reverse_list);
 	
 	return UNITY_END();
 	
