@@ -19,12 +19,10 @@ int pos = 0;	//just a testing poition value to work with SLL
 int actual_val;	//for testing ASSERTS
 int rand_val;
 
-int actual_len;
-int data;
-
 q_node* front_ = NULL;
 q_node* rear_ = NULL;
-
+int actual_len;
+int data;
 
 /* Required by the unity test framework */
 void setUp(){}
@@ -105,9 +103,9 @@ void test_sll_add_at_position( void ){
 }
 
 void test_sll_delete_begining( void ){
-	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));actual_len = sll_len(sll_root);
-	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));actual_len = sll_len(sll_root);
-	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));actual_len = sll_len(sll_root);
+	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));
+	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));
+	TEST_ASSERT_EQUAL(1, sll_delete_begining(&sll_root));
 
 }
 
@@ -134,38 +132,41 @@ void test_sll_reverse_list( void ){
 }
 	
 void test_sll_peek( void ){	
-	TEST_ASSERT_EQUAL(16, sll_peek(root, 0));
-	TEST_ASSERT_EQUAL(9, sll_peek(root, 1));
-	TEST_ASSERT_EQUAL(8, sll_peek(root, 2));
-	TEST_ASSERT_EQUAL(7, sll_peek(root, 3));
+	temp = sll_root;
+	pos = 0;
+	int index = 0;	//peeking at index 0
+	while( index != pos ){
+		temp = temp->link;
+		index++;
+	}
+	actual_val = temp->data;
+	temp = NULL;
+	TEST_ASSERT(actual_val == sll_peek(sll_root, pos));
 }
 
 void test_sll_overwrite( void ){
-	pos = -1;
-	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_overwrite(&root, ++pos, 69));sll_print_all(root);
+	pos = 0;	//overwriting at position 0
+	TEST_ASSERT_EQUAL(1, sll_overwrite(&sll_root, pos, 69));
 }
 
 void test_sll_sort_bubble( void ){
-	TEST_ASSERT_EQUAL(1, sll_sort_bubble(&root, 'a'));sll_print_all(root);
-	TEST_ASSERT_EQUAL(1, sll_sort_bubble(&root, 'd'));sll_print_all(root);
+	TEST_ASSERT_EQUAL(1, sll_sort_bubble(&sll_root, 'a'));
+	TEST_ASSERT_EQUAL(1, sll_sort_bubble(&sll_root, 'd'));
 }
 
 
 /******************* Queue test function definitions**************/
 void test_q_push( void ){
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
-	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));q_print_all(front_);actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
+	TEST_ASSERT_EQUAL(1, q_push(&front_, &rear_, ++data));actual_len++;
 }
 
 void test_q_len( void ){
@@ -173,10 +174,10 @@ void test_q_len( void ){
 }
 
 void test_q_pop( void ){
-	TEST_ASSERT_EQUAL(1, q_pop(&front_));q_print_all(front_);actual_len--;
-	TEST_ASSERT_EQUAL(2, q_pop(&front_));q_print_all(front_);actual_len--;
-	TEST_ASSERT_EQUAL(3, q_pop(&front_));q_print_all(front_);actual_len--;
-	TEST_ASSERT_EQUAL(4, q_pop(&front_));q_print_all(front_);actual_len--;
+	TEST_ASSERT_EQUAL(1, q_pop(&front_));actual_len--;
+	TEST_ASSERT_EQUAL(2, q_pop(&front_));actual_len--;
+	TEST_ASSERT_EQUAL(3, q_pop(&front_));actual_len--;
+	TEST_ASSERT_EQUAL(4, q_pop(&front_));actual_len--;
 }
 
 void test_q_peek( void ){
@@ -194,64 +195,7 @@ void test_q_peek( void ){
 int main(){
 	UNITY_BEGIN();	//initilize the uinity framework
 	//RUN_TEST macro needs function pointer, in our case for eg. test_sll_append (function name is also a function pointer, hehehe)
-	/*
-	/////// SLL testing
-	RUN_TEST(test_sll_append);	
-	printf("\n--------------------------------------------------------------------------\n");
 	
-	RUN_TEST(test_sll_len);	
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_add_at_begining);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_len);	//testing sll_len again
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_add_at_position);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_delete_begining);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_delete_at_position);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_swap_data);
-	printf("\n--------------------------------------------------------------------------\n");
-
-	RUN_TEST(test_sll_reverse_list);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_peek);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_overwrite);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_sll_sort_bubble);
-	printf("\n--------------------------------------------------------------------------------------------\n");
-	printf("\n--------------------------------------------------------------------------------------------\n");
-	printf("\n--------------------------------------------------------------------------------------------\n");
-	pos = 0;actual_len = 0;data = 0;
-	
-	////// Queue testing
-	RUN_TEST(test_q_push);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_q_len);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_q_len);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_q_pop);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	RUN_TEST(test_q_peek);
-	printf("\n--------------------------------------------------------------------------\n");
-	
-	*/
 	
 	RUN_TEST(test_sll_append);
 	
@@ -268,6 +212,21 @@ int main(){
 	RUN_TEST(test_sll_swap_data);
 	
 	RUN_TEST(test_sll_reverse_list);
+	
+	RUN_TEST(test_sll_peek);
+	
+	RUN_TEST(test_sll_overwrite);
+	
+	RUN_TEST(test_sll_sort_bubble);
+	
+	
+	RUN_TEST(test_q_push);
+	
+	RUN_TEST(test_q_len);
+	
+	RUN_TEST(test_q_pop);
+	
+	RUN_TEST(test_q_peek);
 	
 	return UNITY_END();
 	
