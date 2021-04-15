@@ -1,18 +1,17 @@
-name: Unity Testing - Unity
+name: Unit Testing - Unity
 
-on: 
+on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
-    
-  
-  jobs:
-    test:
-    
-      runs-on: ubuntu-latest
-      
-      steps:
-      - uses: actions/checkout@v2
-      - name: make
-        run: make -C 3_Implementation/ test
+    branches: [ master ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make
+      run: make -C 3_Implementation/ test
