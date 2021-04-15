@@ -51,27 +51,25 @@ Each of these sub-structure has their own basic functional units called objects(
 
 ## 4W's 1'H
 
-that goes here
+### WHO 
 
-### Who
-
-who?
+• In situatuions like if the user want to use the features of Data-structures like Linked-lists, Queues, Binary trees but does not want to code it from scratch, then this library is best suited for them. 
 
 ### What 
 
-waht!!
+• As it is very tedious to write all the code from scratch just to implement some features of Data-structures its recomended to use libraries and in our case ours.
 
 ### Where
 
-where?
+• Most of the time run-time declarations are mostly done on devices which are real-time i.e, Embedded systems
 
 ### When
 
-when?
+• When to use? when you have completly gave the hopes of coding data-structures functions form scratch..
 
 ### How
 
-gomma how!!
+• All you got to do is git clone the repo, copy the 3_implementation directory to your work directory and include header in your source code along with all the c files and h files while compiling through gcc commands.
 
 # Detail Requirements
 
