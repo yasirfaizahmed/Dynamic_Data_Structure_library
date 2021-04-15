@@ -4,7 +4,7 @@
 
 |         Build     |         Code Quality        |         Unity     |         Git Inspector       |
 |-------------------|-----------------------------|-------------------|-----------------------------|
-|[![C/C++ CI](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml/badge.svg?branch=master&event=push)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml)|[![Code Quality - Static Code - Cppcheck](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/cppcheck.yml)|                   |                   |
+|[![C/C++ CI](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml/badge.svg?branch=master&event=push)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/c-cpp.yml)|[![Code Quality - Static Code - Cppcheck](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/cppcheck.yml)|[![Unit Testing - Unity](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/unity.yml/badge.svg)](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/actions/workflows/unity.yml)|                   |
 
 
 ## Folder Structure
