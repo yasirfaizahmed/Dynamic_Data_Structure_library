@@ -13,7 +13,6 @@
 
 /********************* definitiosn for other libs to work *****************************/
 sll_node* sll_root = NULL;	//lets start with an empty SLL
-sll_node* root = NULL;	//lets start with an empty SLL
 sll_node* temp = NULL;	//for moving accross the LLs
 int pos = 0;	//just a testing poition value to work with SLL
 int actual_val;	//for testing ASSERTS
@@ -23,6 +22,8 @@ q_node* front_ = NULL;
 q_node* rear_ = NULL;
 int actual_len;
 int data;
+
+bst_node* bst_root = NULL;
 
 /* Required by the unity test framework */
 void setUp(){}
@@ -188,7 +189,23 @@ void test_q_peek( void ){
 }
 
 
-/******************* Queue test function definitions**************/
+/******************* BST test function definitions**************/
+void test_bst_append ( void ){
+	TEST_ASSERT_EQUAL(1, bst_append(&bst_root, 69));
+	TEST_ASSERT_EQUAL(1, bst_append(&bst_root, 79));
+	TEST_ASSERT_EQUAL(1, bst_append(&bst_root, 59));
+}
+
+void test_bst_search_parent( void ){
+	TEST_ASSERT( NULL != bst_search_parent(&bst_root, 59, 'c'));
+	TEST_ASSERT( NULL != bst_search_parent(&bst_root, 59, 'p'));
+}
+
+void test_bst_delete ( void ){
+	TEST_ASSERT_EQUAL(1, bst_delete(&bst_root, 69));
+}
+
+
 
 
 
@@ -196,7 +213,7 @@ int main(){
 	UNITY_BEGIN();	//initilize the uinity framework
 	//RUN_TEST macro needs function pointer, in our case for eg. test_sll_append (function name is also a function pointer, hehehe)
 	
-	
+	//SLL test functions
 	RUN_TEST(test_sll_append);
 	
 	RUN_TEST(test_sll_len);
@@ -219,7 +236,7 @@ int main(){
 	
 	RUN_TEST(test_sll_sort_bubble);
 	
-	
+	//Queue test functions
 	RUN_TEST(test_q_push);
 	
 	RUN_TEST(test_q_len);
@@ -227,6 +244,14 @@ int main(){
 	RUN_TEST(test_q_pop);
 	
 	RUN_TEST(test_q_peek);
+	
+	//BST test functions
+	RUN_TEST(test_bst_append);
+	
+	RUN_TEST(test_bst_search_parent);
+	
+	RUN_TEST(test_bst_delete);
+	
 	
 	return UNITY_END();
 	
