@@ -75,7 +75,11 @@ Each of these sub-structure has their own basic functional units called objects(
 
 ## High Level Requirements
 
-in detailed here
+|   ID   |  Description |   Status  |
+|--------|--------------|-----------|
+|1|Need to add more utility functions on Binary search trees | Working on it|
+|2|Need to add sorting function to Queues| yet to start|
+|3|Need to create and merge with Stack, Graph library   | have a basic idea, will start|
 
 ## Low Level Requirements
 
