@@ -83,7 +83,10 @@ Each of these sub-structure has their own basic functional units called objects(
 
 ## Low Level Requirements
 
-in detailed here
+|   ID   |  Description |   Status  |
+|--------|--------------|-----------|
+|1|Need to make the initialization syntax a bit simpler | Working on it|
+|2|Need to improve utilization of memory a bit mroe effeciently| yet to start|
 
 
 
