@@ -59,17 +59,15 @@ test : $(BUILD)
 run :
 		$(call FixPath, $(PROJECT_NAME).$(EXEC))
 
-<<<<<<< HEAD
-# cpp check
-cppcheck:
-	cppcheck --enable=all $(SRC) main.c 
+
+
 		
 		
-=======
+
 # run test executable
 run_test :
 		$(TEST_OUTPUT)
->>>>>>> 9c7970ac1842402bf0a458d70a3539a6e8f00822
+
 
 # clean all exectables
 clean : 
