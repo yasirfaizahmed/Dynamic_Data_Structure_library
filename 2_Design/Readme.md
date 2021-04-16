@@ -8,5 +8,9 @@
 
 ## Low Level Design
 
+### Node initilization/ appending
+
 ![append functions](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/2_Design/Untitled%20Diagram.png)
+
+### 
 
