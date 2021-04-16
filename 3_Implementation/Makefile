@@ -1,4 +1,3 @@
-
 # our compiler collection name
 CC = gcc
 
@@ -51,15 +50,18 @@ endif
 all : $(SRC) $(BUILD)
 		$(CC) $(SRC) $(INC) -o $(call FixPath, $(PROJECT_NAME).$(EXEC))
 
-# run main executable	
-run :
-		$(call FixPath, $(PROJECT_NAME).$(EXEC))
-
 # make test files executable
 test : $(BUILD)
 		$(CC) $(TEST_SRC) $(TEST_INC) -o $(call FixPath, $(TEST_NAME).$(EXEC))
 		./$(TEST_NAME).$(EXEC)
 
+# run main executable	
+run :
+		$(call FixPath, $(PROJECT_NAME).$(EXEC))
+
+# run test executable
+run_test :
+		$(TEST_OUTPUT)
 
 # clean all exectables
 clean : 
