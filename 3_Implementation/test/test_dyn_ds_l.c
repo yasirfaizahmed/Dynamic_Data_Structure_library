@@ -250,7 +250,7 @@ int main(){
 	
 	RUN_TEST(test_bst_search_parent);
 	
-	RUN_TEST(test_bst_delete);
+	//RUN_TEST(test_bst_delete);
 	
 	
 	return UNITY_END();
