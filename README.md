@@ -30,7 +30,7 @@ Click [Here](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/gr
 • As mentioned in [1_requirements](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/tree/master/1_Requirements), I was facing a problem of passing the structure pointer evertime a funciton which modifies the list/tree is called this actaully got my head scratched since I did'nt wanted to keep passing the pointer everytime from function to function.
 
 ### How I overcame 1
-• I just posted my question on [STACKOVERFLOW](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi) and it turns out I got the answer on how to do it the right way, And rest of the code development went very smooth.
+• I just posted my question on [STACKOVERFLOW](https://stackoverflow.com/questions/62980973/root-pointer-of-linked-list-keeps-varying-when-passed-to-a-function-in-header-fi) and it turns out I got the answer on how to do it the right way, And rest of the code development went very smooth .
 
 ### Challenge 2
 • Need a much simpler way to initilize the list/ tree 
