@@ -2,9 +2,15 @@
 
 ## High Level Deisign
 
-somethidn here
+### Library Design :
+
+![HLD](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/2_Design/1.png)
 
 ## Low Level Design
 
-something here
+### Node initilization/ appending
+
+![append functions](https://github.com/yasirfaizahmed/Dynamic_Data_Structure_library/blob/master/2_Design/Untitled%20Diagram.png)
+
+### 
 
