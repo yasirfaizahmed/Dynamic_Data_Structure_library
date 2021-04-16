@@ -33,7 +33,7 @@ TEST_OUTPUT = $(BUILD)/test_$(PROJECT_NAME).out
 TEST_NAME = test_dyn_ds_l
 
 ifdef OS
-   RM = rmdir /Q /S
+   RM = del
    FixPath = $(subst /,\,$1)
    EXEC = exe
 else
@@ -51,19 +51,16 @@ endif
 all : $(SRC) $(BUILD)
 		$(CC) $(SRC) $(INC) -o $(call FixPath, $(PROJECT_NAME).$(EXEC))
 
+# run main executable	
+run :
+		$(call FixPath, $(PROJECT_NAME).$(EXEC))
+
 # make test files executable
 test : $(BUILD)
 		$(CC) $(TEST_SRC) $(TEST_INC) -o $(call FixPath, $(TEST_NAME).$(EXEC))
 		./$(TEST_NAME).$(EXEC)
 
-# run main executable	
-run :
-		$(call FixPath, $(PROJECT_NAME).$(EXEC))
-
-# run test executable
-run_test :
-		$(TEST_OUTPUT)
 
 # clean all exectables
 clean : 
-		$(RM) build
+		$(RM) *.$(EXEC)
