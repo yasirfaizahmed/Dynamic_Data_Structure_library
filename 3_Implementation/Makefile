@@ -54,8 +54,7 @@ all : $(SRC) $(BUILD)
 # make test files executable
 test : $(BUILD)
 		$(CC) $(TEST_SRC) $(TEST_INC) -o $(call FixPath, $(TEST_NAME).$(EXEC))
-		chmod a+x $(call FixPath, $(TEST_NAME).$(EXEC))
-		./$(call FixPath, $(TEST_NAME).$(EXEC))
+		./$(TEST_NAME).$(EXEC)
 
 # run main executable	
 run :
